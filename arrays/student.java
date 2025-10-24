@@ -6,6 +6,7 @@ public class student {
         for(int grade: arr){
             System.out.print(grade+" ");
         }
+        System.out.println();
     }
     public static void highestScore(int[] arr){
         for(int i =0;i<arr.length-1;i++){
@@ -17,7 +18,9 @@ public class student {
                 }
             }
         }
+        System.out.println("---------------------------------------");
         System.out.println("\nThe highest score is : "+arr[0]);
+        System.out.println("---------------------------------------");
     }
     public static void lowestScore(int[] arr){
         for(int i =0;i<arr.length-1;i++){
@@ -29,20 +32,46 @@ public class student {
                 }
             }
         }
+        System.out.println("---------------------------------------");
         System.out.println("\nThe lowest score is :"+arr[arr.length-1]);
+        System.out.println("---------------------------------------");
+    }
+    public static void averageScore(int[] arr){
+        int sum=0;
+        for(int grade : arr){
+            sum+=grade;
+        }
+        System.out.println("---------------------------------------");
+        System.out.println("The total avergae score : "+(sum/arr.length));
+        System.out.println("---------------------------------------");
+    }
+    public static void targetStudent(int[] arr, int target){
+        boolean found = false;
+        for(int grade : arr){
+            if(grade==target){
+                found=true;
+            }
+        }
+        System.out.println((found)?"Grade found":"Grade not found");
+        System.out.println("---------------------------------------");
+        
     }
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("---------------------------------------");
         System.out.println("Enter the number of students: ");
         int n = sc.nextInt();
         int[] arr = new int[n];
+        System.out.println("Enter the scores of "+n+" students");
         for(int i =0;i<n;i++){
             arr[i]=sc.nextInt();
         }
         boolean running=true;
 
-        while(running=true){
+        System.out.println();
+        while(running==true){
+            System.out.println("---------------------------------------");
             System.out.println("Welcome to student's marklist!");
             System.out.println("1.Show grades of students.");
             System.out.println("2.The student with highest score.");
@@ -67,7 +96,10 @@ public class student {
                     averageScore(arr);
                     break;
                 case 5:
-                    targetStudent(arr);
+                    System.out.println("---------------------------------------");
+                    System.out.println("Enter the grade needed to find");
+                    int target = sc.nextInt();
+                    targetStudent(arr,target);
                     break;
                 case 6:
                     running=false;
@@ -75,8 +107,7 @@ public class student {
                 default:
                     System.out.println("Enter a valid choice!(1 to 6)");
             }
-
         }
+        sc.close();
     }
-    
 }

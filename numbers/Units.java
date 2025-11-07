@@ -20,7 +20,7 @@ public class Units {
         System.out.println("The hundredth place: "+((int)(Math.abs(n)*100))%10);
     }
     public static void getThousandthsPlace(double n){
-        System.out.println('The thousandths place: '+((int)(Math.abs(n)*1000))%10);
+        System.out.println("The thousandths place: "+((int)(Math.abs(n)*1000))%10);
     }
 
 
@@ -36,7 +36,7 @@ public class Units {
         
         getTenthsPlace(n);
         getHundredthsPlace(n);
-        getThousandthsPlace()
+        getThousandthsPlace(n)
         sc.close();
     }
 }

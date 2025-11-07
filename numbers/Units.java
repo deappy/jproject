@@ -33,7 +33,7 @@ public class Units {
         getTensPlace(n);
         getHundredsPlace(n);
         getThousandsPlace(n);
-        
+        System.out.println("");
         getTenthsPlace(n);
         getHundredthsPlace(n);
         getThousandthsPlace(n);

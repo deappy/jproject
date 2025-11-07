@@ -4,13 +4,16 @@ public class Units {
     public static void getUnitsPlace(int n){
         System.out.println("The units place is: "+(n%10));
     }
+    public static void getTensPlace(int n ){
+        System.out.println("The tens place is: "+((n/10)%10));
+    }
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the 4 digit number with 3 digit: ");
         int n =sc.nextInt();
         
         getUnitsPlace(n);
-        
+        getTensPlace(n);
         sc.close();
     }
 }

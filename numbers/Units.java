@@ -36,7 +36,7 @@ public class Units {
         
         getTenthsPlace(n);
         getHundredthsPlace(n);
-        getThousandthsPlace(n)
+        getThousandthsPlace(n);
         sc.close();
     }
 }

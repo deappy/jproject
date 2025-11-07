@@ -7,6 +7,9 @@ public class Units {
     public static void getTensPlace(int n ){
         System.out.println("The tens place is: "+((n/10)%10));
     }
+    public static void getHundredsPlace(int n){
+        System.out.println("The hundreds place is: "+((n/100)%10));
+    }
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the 4 digit number with 3 digit: ");
@@ -14,6 +17,7 @@ public class Units {
         
         getUnitsPlace(n);
         getTensPlace(n);
+        getHundredsPlace(n);
         sc.close();
     }
 }
